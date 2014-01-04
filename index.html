@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>World Weather Online</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Pragma" content="no-cache">
+    
+    <link href="css/weather.css" rel="stylesheet" type="text/css">
+    
+    <script type="application/javascript" src="js/api.js"></script>
+    <script src='intelxdk.js'></script>
+    <script type="application/javascript" src="js/appframework.min.js"></script>
+    
+    <script type="text/javascript" language="javascript">
+        function onDeviceReady() {
+            // Hide splash screen now that the app is ready to run
+            intel.xdk.device.hideSplashScreen();
+            preventDefaultScroll = function(evt) {
+	           evt.preventDefault();
+	           window.scroll(0,0);
+	           return false;
+            };
+            
+            window.document.addEventListener('touchmove', preventDefaultScroll, false);
+            
+            // Check if the API key is valid in js/api.js
+            checkKeyValidity();                                                        
+        }
+        // Initial event handler to detect when Intel library is ready to roll
+        document.addEventListener("intel.xdk.device.ready", onDeviceReady, false);      
+    </script>
+</head>
+<body>
+    <div id="content" style="">
+        <div class='image_header'>
+            <img src='http://content.developer.mashery.com.s3.amazonaws.com/xdk-demos/worldweatheronline/logo.jpg' style='bottom:0; left:0; position:absolute;' />
+            <img src='http://content.developer.mashery.com.s3.amazonaws.com/xdk-demos/masherymade.png' style='position: absolute; left:auto; right:0;'/>
+        </div>
+        <div>
+            The World Weather Online APIs provide global weather forecast and weather content. The API is very easy to use. This sample app uses the Local Weather API returning current temperature and condition for the location entered.<br /><br />
+                
+            Visit <a href="http://developer.worldweatheronline.com/" target="_blank" style="float:none;">developer.worldweatheronline.com</a> to get your free API key today.        
+        </div>
+        <div class='search_form'>
+            <input type="text" name="q" value="" placeholder="City or ZIP Code" id="weather" required /> <button id="submit" onclick='search();'>Search</button>
+        </div>
+        <div class="search_result"></div>
+    </div>
+</body>
+</html>
