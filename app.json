@@ -8,7 +8,7 @@
     "highlights": ["App Framework", "Blank Project", "Web Services API"],
     "keywords": ["App Framework", "Blank Project", "Web Services API"],
     "relname": "4.0.0",
-    "visible": "true",
+    "visible": "false",
     "appname": "demo.masheryworldweatheronline",
     "apppreview": "false",
     "type":"blankproject"
