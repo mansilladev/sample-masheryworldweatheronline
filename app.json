@@ -1,0 +1,15 @@
+{
+    "reponame": "sample-masheryworldweatheronline",
+    "title": "Mashery World Weather Online API",
+    "abbr": "MasheryWorldWeather",
+    "tooltip": "A demo app that features the World Weather Online, part of the Mashery API Network",
+    "description": "This demo app provides a way to see the World Weather Online API in action.",    
+    "articleUrl": "",
+    "highlights": ["App Framework", "Blank Project", "Web Services API"],
+    "keywords": ["App Framework", "Blank Project", "Web Services API"],
+    "relname": "4.0.0",
+    "visible": "true",
+    "appname": "demo.masheryworldweatheronline",
+    "apppreview": "false",
+    "type":"blankproject"
+}
